@@ -1,4 +1,5 @@
 import * as React from "react"
+import Header from "../components/header";
 
 // styles
 const pageStyles = {
@@ -129,10 +130,11 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
+      <Header/>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations
-        <br />
+        <br/>
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
         <span role="img" aria-label="Party popper emojis">
           🎉🎉🎉
@@ -155,7 +157,7 @@ const IndexPage = () => {
           </a>
         </li>
         {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+          <li key={link.url} style={{...listItemStyles, color: link.color}}>
             <span>
               <a
                 style={linkStyle}
