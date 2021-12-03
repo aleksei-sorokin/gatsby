@@ -1,9 +1,7 @@
 import * as React from "react";
-import {Link} from 'gatsby';
 import Header from "../components/header";
 import {graphql} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import page from "../pages/page";
 
 const pageStyles = {
   color: "#232129",

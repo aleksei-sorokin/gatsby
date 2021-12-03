@@ -5,10 +5,10 @@ module.exports = {
   },
   plugins: [
     "gatsby-transformer-remark",
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-netlify-cms",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-manifest",
