@@ -5,10 +5,8 @@ import icon from '../images/icon.png'
 
 const Header = () =>  (
   <header>
-    <h1>title</h1>
-    <Link to="/">
-      <img src={icon} alt="icon"/>
-    </Link>
+    <h1>Header</h1>
+    <Link to="/">Home</Link>
   </header>
 )
 
