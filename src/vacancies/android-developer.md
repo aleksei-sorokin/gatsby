@@ -12,35 +12,28 @@ Location: Lorem
 
 **Required skills**
 
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-<br>
-**Nice to have**
-
-- Lorem
-- Lorem
-- Lorem
-- Lorem 
-<br>
-**Responsibilities**
-
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-<br>
-**We Offer**
-
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+  **Nice to have**
+* Lorem
+* Lorem
+* Lorem
+* Lorem 
+  **Responsibilities**
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+  **We Offer**
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
