@@ -2,6 +2,7 @@
 title: Android Developer
 category: vacancies
 url: new-article
+image: ../images/icon.png
 ---
 
 We are looking for an exceptional Android Developer to work
