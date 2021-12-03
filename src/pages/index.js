@@ -6,7 +6,7 @@ import {GatsbyImage, getImage } from "gatsby-plugin-image";
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: '0 96px 20px',
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
@@ -22,7 +22,6 @@ const articleStyles = {
   flexDirection: 'column',
   alignItems: 'center',
   gridGap: '20px',
-  margin: 10
 }
 // markup
 const IndexPage = ({data}) => {
@@ -30,7 +29,7 @@ const IndexPage = ({data}) => {
   return (
     <main style={pageStyles}>
       <Header/>
-      <title>Home Page</title>
+      <h1 style={{marginBottom: 20}}>Home Page</h1>
       <div style={containerStyles}>
         {nodes.map(post => {
           const {category, title, url, image} = post.frontmatter;
