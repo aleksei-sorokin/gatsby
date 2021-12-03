@@ -22,18 +22,27 @@ Location: Lorem
 * Lorem
   <br>
     **Nice to have**
+
+
+
 * Lorem
 * Lorem
 * Lorem
 * Lorem 
   <br>
     **Responsibilities**
+
+
+
 * Lorem
 * Lorem
 * Lorem
 * Lorem
   <br>
     **We Offer**
+
+
+
 * Lorem ipsum.
 * Lorem ipsum.
 * Lorem ipsum.
