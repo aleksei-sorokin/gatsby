@@ -1,9 +1,9 @@
 ---
-title: Article2
-category: articles
-url: new-article2
+title: Article
+category: vacancies
+url: new-article
 image: ../images/icon.png
 ---
 
-# New Article 2
+# New Article
 **lorem lorem lorem** lorem lorem lorem lorem lorem lorem lorem
