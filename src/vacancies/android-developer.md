@@ -5,7 +5,6 @@ url: new-article
 image: ../images/icon.png
 date: 2021-12-03T13:14:01.885Z
 ---
-
 We are looking for an exceptional Android Developer to work
 with our team and join our community of talented experts.
 
