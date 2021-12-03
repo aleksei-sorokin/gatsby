@@ -31,6 +31,7 @@ Location: Lorem
 * Lorem
 * Lorem
   **We Offer**
+
 * Lorem ipsum.
 * Lorem ipsum.
 * Lorem ipsum.
