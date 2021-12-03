@@ -3,6 +3,7 @@ title: Android Developer
 category: vacancies
 url: new-article
 image: ../images/icon.png
+date: 2021-12-03T13:14:01.885Z
 ---
 
 We are looking for an exceptional Android Developer to work
@@ -20,18 +21,21 @@ Location: Lorem
 - Lorem
 - Lorem
 - Lorem
+<br>
 **Nice to have**
 
 - Lorem
 - Lorem
 - Lorem
-- Lorem
+- Lorem 
+<br>
 **Responsibilities**
 
 - Lorem
 - Lorem
 - Lorem
 - Lorem
+<br>
 **We Offer**
 
 - Lorem ipsum.
