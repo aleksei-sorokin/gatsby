@@ -4,6 +4,7 @@ category: vacancies
 url: android-developer
 image: ../images/icon.png
 date: 2021-12-03T13:40:57.055Z
+thumbnail: ../images/icon.png
 ---
 We are looking for an exceptional Android Developer to work
 with our team and join our community of talented experts.

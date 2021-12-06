@@ -44,8 +44,16 @@ const formButtonStyle = {
 
 const Article = ({data}) => {
   const {html} = data.markdownRemark;
-  const {title, image} = data.markdownRemark.frontmatter;
+  const {title, image, thumbnail} = data.markdownRemark.frontmatter;
   const img = getImage(image);
+  const thumb = () => {
+    return (
+      <div>
+        <h3>Thumb</h3>
+        <GatsbyImage alt={title} image={ getImage(thumbnail)}/>
+      </div>
+    )
+  };
   return (
     <div style={pageStyles}>
       <Header/>
@@ -56,6 +64,7 @@ const Article = ({data}) => {
           <GatsbyImage alt={title} image={img}/>
         </div>
         <div dangerouslySetInnerHTML={{__html: html}}/>
+        {thumbnail ? thumb() : ''}
       </div>
       <div style={divRight}>
         <form action="" style={formStyle}>
@@ -91,6 +100,11 @@ export const query = graphql`
                 url
                 category
                 image {
+                    childImageSharp {
+                        gatsbyImageData(width: 300, quality: 95)
+                    }
+                }
+                thumbnail {
                     childImageSharp {
                         gatsbyImageData(width: 300, quality: 95)
                     }
