@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: aleksei-sorokin/gatsby
+  repo: aleksei-sorokin/gatsby.git
   branch: master
 
 media_folder: static/assets
