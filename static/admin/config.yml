@@ -4,7 +4,7 @@ backend:
   branch: master
 
 media_folder: static/assets
-public_folder: src/images
+public_folder: images
 
 collections:
   - name: vacancies
