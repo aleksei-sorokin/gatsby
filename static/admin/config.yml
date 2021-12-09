@@ -9,7 +9,7 @@ public_folder: src/images
 collections:
   - name: vacancies
     label: Vacancies
-    folder: "src/vacancies"
+    folder: "src/jobs"
     create: true
     fields:
       - { name: url, label: Url }
