@@ -20,3 +20,6 @@ collections:
         name: "thumbnail"
         widget: "image"
         choose_url: true
+      - label: "LinkedIn"
+        name: "linkedIn"
+        required: false
