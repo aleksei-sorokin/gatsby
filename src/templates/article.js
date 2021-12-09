@@ -104,11 +104,6 @@ export const query = graphql`
                         gatsbyImageData(width: 300, quality: 95)
                     }
                 }
-                thumbnail {
-                    childImageSharp {
-                        gatsbyImageData(width: 300, quality: 95)
-                    }
-                }
             }
         }
     }

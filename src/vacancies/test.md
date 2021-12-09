@@ -1,12 +1,45 @@
 ---
-url: another-vacancy
-date: 2021-12-06T06:22:05.879Z
-title: Another Vacancy
-thumbnail: ../images/icon.png
+title: Android Developer
+category: vacancies
+url: android-developer
+image: ../images/icon.png
+date: 2021-12-03T13:40:57.055Z
 ---
-Lorem
+We are looking for an exceptional Android Developer to work
+with our team and join our community of talented experts.
 
-**Lorem**
+Location: Lorem
 
-* lorem
-* lorem
+**Required skills**
+
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+  <br>
+  **Nice to have**
+
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+  <br>
+  **Responsibilities**
+
+- Lorem
+- Lorem
+- Lorem
+- Lorem
+  <br>
+  **We Offer**
+
+- Lorem ipsum.
+- Lorem ipsum.
+- Lorem ipsum.
+- Lorem ipsum.
+- Lorem ipsum.
+- Lorem ipsum.
