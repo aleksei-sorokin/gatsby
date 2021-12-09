@@ -4,12 +4,12 @@ backend:
   branch: master
 
 media_folder: static/assets
-public_folder: images
+public_folder: /images
 
 collections:
   - name: vacancies
     label: Vacancies
-    folder: "src/jobs"
+    folder: "src/vacancies"
     create: true
     fields:
       - { name: url, label: Url }
