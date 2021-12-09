@@ -12,34 +12,33 @@ Location: Lorem
 
 **Required skills**
 
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
-- Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
   <br>
   **Nice to have**
+* Lorem
 
-- Lorem
-- Lorem
-- Lorem
-- Lorem
+  ![](static/assets/images/icon-512x512.png)
+* Lorem
+* Lorem
+* Lorem
   <br>
   **Responsibilities**
-
-- Lorem
-- Lorem
-- Lorem
-- Lorem
+* Lorem
+* Lorem
+* Lorem
+* Lorem
   <br>
   **We Offer**
-
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
-- Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
+* Lorem ipsum.
