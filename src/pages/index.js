@@ -65,7 +65,6 @@ const IndexPage = ({ data }) => {
 
       <form 
       name='contact' 
-      action="test"
       method='POST' 
       netlify-honeypot='bot-field' 
       data-netlify='true'>
