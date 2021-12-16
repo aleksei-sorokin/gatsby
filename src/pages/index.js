@@ -65,6 +65,7 @@ const IndexPage = ({ data }) => {
 
       <form 
       name='contact' 
+      action="test"
       method='POST' 
       netlify-honeypot='bot-field' 
       data-netlify='true'>
@@ -82,6 +83,9 @@ const IndexPage = ({ data }) => {
           <label>
             Message: <textarea name='message'></textarea>
           </label>
+        </p>
+        <p>
+          <div data-netlify-recaptcha="true"></div>
         </p>
         <p>
           <button type='submit'>Send</button>
