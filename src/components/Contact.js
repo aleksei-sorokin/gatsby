@@ -5,8 +5,8 @@ import axios from 'axios';
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+    .join('&');
+};
 
 const ApplyFormFormik = ({ data }) => {
   const [validationFlag, setValidationFlag] = useState(false);
@@ -46,20 +46,19 @@ const ApplyFormFormik = ({ data }) => {
     console.log('send form');
     const formData = new FormData();
     data.last_name = data.first_name;
-    
+
     for (let i in data) {
       if (i !== 'bot-field' && i !== 'form-name') {
         formData.append(`job_application[${i}]`, data[i]);
-      } 
-      // else {
-      //   formData.append(i, data[i]);
-      // }
+      } else {
+        formData.append(i, data[i]);
+      }
     }
 
     formData.append('token', process.env.FORM_TOKEN);
 
     axios
-      .post(`/`, encode({'form-name': 'resume'}),formData, {
+      .post(`/`, formData, {
         headers: {
           //Authorization: `Basic ${process.env.HEADER_TOKEN}`,
         },
@@ -84,9 +83,9 @@ const ApplyFormFormik = ({ data }) => {
       <div>
         <div>
           <form name='resume' method='POST' netlify-honeypot='bot-field' data-netlify='true' onSubmit={formik.handleSubmit}>
-            <p style={{display: 'none'}}>
+            <p style={{ display: 'none' }}>
               <label>
-                Don’t fill this out if you’re human: <input name='bot-field'  onChange={formik.handleChange} value={formik.values['bot-field']}/>
+                Don’t fill this out if you’re human: <input name='bot-field' onChange={formik.handleChange} value={formik.values['bot-field']} />
               </label>
             </p>
             <div>
