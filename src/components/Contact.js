@@ -49,7 +49,8 @@ const ApplyFormFormik = ({ data }) => {
 
     for (let i in data) {
       if (i !== 'bot-field' && i !== 'form-name') {
-        formData.append(`job_application[${i}]`, data[i]);
+        // formData.append(`job_application[${i}]`, data[i]);
+        formData.append(i, data[i]);
       } else {
         formData.append(i, data[i]);
       }
@@ -93,7 +94,7 @@ const ApplyFormFormik = ({ data }) => {
                 <input id='first_name' type='text' name='first_name' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.first_name} />
               </div>
               <div className='InputGroup-label'>
-                <label htmlFor='name'>Name:</label>
+                <label htmlFor='first_name'>Name:</label>
               </div>
             </div>
 
