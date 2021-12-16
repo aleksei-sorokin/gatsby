@@ -49,8 +49,7 @@ const ApplyFormFormik = ({ data }) => {
 
     for (let i in data) {
       if (i !== 'bot-field' && i !== 'form-name') {
-        // formData.append(`job_application[${i}]`, data[i]);
-        formData.append(i, data[i]);
+        formData.append(`job_application[${i}]`, data[i]);
       } else {
         formData.append(i, data[i]);
       }
