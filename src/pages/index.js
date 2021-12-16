@@ -23,6 +23,23 @@ const articleStyles = {
   alignItems: 'center',
   gridGap: '20px',
 }
+
+const submit = (event) => {
+  event.preventDefault();
+  const result = document.querySelector(".result")
+
+  console.log('event', event)
+  fetch("/", {
+    body: new FormData(event.target),
+    headers: { "Content-Type": "multipart/form-data" },
+    method: "POST",
+  }).then(() => {
+    result.innerHTML = "Success"
+  }).catch(error => {
+    result.innerHTML = `Failed: ${error}`
+  })
+}
+
 // markup
 const IndexPage = ({data}) => {
   const { nodes } = data.allMarkdownRemark;
@@ -42,6 +59,23 @@ const IndexPage = ({data}) => {
           )
         })}
       </div>
+      <div className="result"></div>
+
+      <form 
+        name="resume"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        onSubmit={submit}
+      >
+        <p style={{display: 'none'}}>
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
+        <input name="name" />
+        <button>send</button>
+      </form>
     </main>
   )
 }
