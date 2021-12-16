@@ -1,103 +1,115 @@
-import * as React from "react"
-import Header from "../components/header";
-import {graphql, Link} from "gatsby";
-import {GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as React from 'react';
+import Header from '../components/header';
+import { graphql, Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 // styles
 const pageStyles = {
-  color: "#232129",
+  color: '#232129',
   padding: '0 96px 20px',
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
+  fontFamily: '-apple-system, Roboto, sans-serif, serif',
+};
 
 const containerStyles = {
   display: 'flex',
   flexWrap: 'wrap',
   width: '100%',
-  marginTop: '20px'
-}
+  marginTop: '20px',
+};
 
 const articleStyles = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   gridGap: '20px',
-}
+};
 
 const submit = (event) => {
   event.preventDefault();
-  const result = document.querySelector(".result")
+  const result = document.querySelector('.result');
 
-  console.log('event', event)
-  fetch("/", {
+  console.log('event', event);
+  fetch('/', {
     body: new FormData(event.target),
-    headers: { "Content-Type": "multipart/form-data" },
-    method: "POST",
-  }).then(() => {
-    result.innerHTML = "Success"
-  }).catch(error => {
-    result.innerHTML = `Failed: ${error}`
+    headers: { 'Content-Type': 'multipart/form-data' },
+    method: 'POST',
   })
-}
+    .then(() => {
+      result.innerHTML = 'Success';
+    })
+    .catch((error) => {
+      result.innerHTML = `Failed: ${error}`;
+    });
+};
 
 // markup
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   const { nodes } = data.allMarkdownRemark;
   return (
     <main style={pageStyles}>
-      <Header/>
-      <h1 style={{marginBottom: 20}}>Home Page</h1>
+      <Header />
+      <h1 style={{ marginBottom: 20 }}>Home Page</h1>
       <div style={containerStyles}>
-        {nodes.map(post => {
-          const {category, title, url, image} = post.frontmatter;
+        {nodes.map((post) => {
+          const { category, title, url, image } = post.frontmatter;
           const img = getImage(image);
           return (
             <div style={articleStyles} key={post.id}>
-              <GatsbyImage alt={title} image={img}/>
-             <Link to={`/${category}/${url}`} >{title}</Link>
+              <GatsbyImage alt={title} image={img} />
+              <Link to={`/${category}/${url}`}>{title}</Link>
             </div>
-          )
+          );
         })}
       </div>
-      <div className="result"></div>
+      <div className='result'></div>
 
       <form 
-        name="resume"
-        method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        onSubmit={submit}
-      >
-        <p style={{display: 'none'}}>
-              <label>
-                Don’t fill this out if you’re human: <input name="bot-field" />
-              </label>
-            </p>
-        <input name="name" />
-        <button>send</button>
+      name='contact' 
+      method='POST' 
+      netlify-honeypot='bot-field' 
+      data-netlify='true' 
+      onSubmit={submit}>
+        <p class='hidden'>
+          <label>
+            Don’t fill this out if you’re human: <input name='bot-field' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Email: <input type='text' name='email' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name='message'></textarea>
+          </label>
+        </p>
+        <p>
+          <button type='submit'>Send</button>
+        </p>
       </form>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
-    query MainPage {
-        allMarkdownRemark{
-            nodes {
-                frontmatter {
-                    category
-                    title
-                    url,
-                    image {
-                        childImageSharp {
-                            gatsbyImageData(formats: [AUTO, WEBP], width: 200, placeholder: BLURRED)
-                        }
-                    }
-                }
-                id
+  query MainPage {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          category
+          title
+          url
+          image {
+            childImageSharp {
+              gatsbyImageData(formats: [AUTO, WEBP], width: 200, placeholder: BLURRED)
             }
+          }
         }
+        id
+      }
     }
-`
+  }
+`;
