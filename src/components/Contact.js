@@ -15,7 +15,7 @@ const ApplyFormFormik = ({ data }) => {
   const formik = useFormik({
     initialValues: {
       'bot-field': '',
-      'form-name': 'send-resume',
+      'form-name': 'resume',
       job_position: 'great position',
       first_name: 'qwe',
       last_name: 'qwe',
@@ -59,7 +59,7 @@ const ApplyFormFormik = ({ data }) => {
     formData.append('token', process.env.FORM_TOKEN);
 
     axios
-      .post(`/`, encode({'form-name': 'resume-form', ...formData}), {
+      .post(`/`, encode({'form-name': 'resume', ...formData}), {
         headers: {
           //Authorization: `Basic ${process.env.HEADER_TOKEN}`,
         },
