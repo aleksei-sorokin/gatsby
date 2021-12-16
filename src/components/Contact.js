@@ -80,7 +80,7 @@ const ApplyFormFormik = ({ data }) => {
           <form name='resume' method='POST' netlify-honeypot='bot-field' data-netlify='true' onSubmit={formik.handleSubmit}>
             <p style={{display: 'none'}}>
               <label>
-                Don’t fill this out if you’re human: <input name='bot-field'/>
+                Don’t fill this out if you’re human: <input name='bot-field'  onChange={formik.handleChange} value={formik.values['bot-field']}/>
               </label>
             </p>
             <div>
