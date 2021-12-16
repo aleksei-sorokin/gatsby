@@ -2,6 +2,7 @@ import * as React from 'react';
 import Header from '../components/header';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Contact from '../components/Contact';
 
 // styles
 const pageStyles = {
@@ -24,23 +25,6 @@ const articleStyles = {
   gridGap: '20px',
 };
 
-const submit = (event) => {
-  event.preventDefault();
-  const result = document.querySelector('.result');
-
-  console.log('event', event);
-  fetch('/', {
-    body: new FormData(event.target),
-    headers: { 'Content-Type': 'multipart/form-data' },
-    method: 'POST',
-  })
-    .then(() => {
-      result.innerHTML = 'Success';
-    })
-    .catch((error) => {
-      result.innerHTML = `Failed: ${error}`;
-    });
-};
 
 // markup
 const IndexPage = ({ data }) => {
@@ -61,37 +45,9 @@ const IndexPage = ({ data }) => {
           );
         })}
       </div>
-      <div className='result'></div>
+      <Contact/>
 
-      <form name='contact' method='POST' data-netlify='true'>
-        <p>
-          <label>
-            Your Name: <input type='text' name='name' />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type='email' name='email' />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Role:{' '}
-            <select name='role[]' multiple>
-              <option value='leader'>Leader</option>
-              <option value='follower'>Follower</option>
-            </select>
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name='message'></textarea>
-          </label>
-        </p>
-        <p>
-          <button type='submit'>Send</button>
-        </p>
-      </form>
+   
     </main>
   );
 };
