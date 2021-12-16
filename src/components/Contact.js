@@ -59,7 +59,7 @@ const ApplyFormFormik = ({ data }) => {
     formData.append('token', process.env.FORM_TOKEN);
 
     axios
-      .post(`/`, formData, encode({'form-name': 'resume-form'}), {
+      .post(`/`, encode({'form-name': 'resume-form', ...formData}), {
         headers: {
           //Authorization: `Basic ${process.env.HEADER_TOKEN}`,
         },
