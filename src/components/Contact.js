@@ -10,7 +10,7 @@ const ApplyFormFormik = ({ data }) => {
   const formik = useFormik({
     initialValues: {
       'bot-field': '',
-      'form-name': 'contact1',
+      'form-name': 'send-resume',
       job_position: 'great position',
       first_name: 'qwe',
       last_name: 'qwe',
