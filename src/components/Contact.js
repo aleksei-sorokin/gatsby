@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 const ApplyFormFormik = ({ data }) => {
   const [validationFlag, setValidationFlag] = useState(false);
@@ -45,15 +50,16 @@ const ApplyFormFormik = ({ data }) => {
     for (let i in data) {
       if (i !== 'bot-field' && i !== 'form-name') {
         formData.append(`job_application[${i}]`, data[i]);
-      } else {
-        formData.append(i, data[i]);
-      }
+      } 
+      // else {
+      //   formData.append(i, data[i]);
+      // }
     }
 
     formData.append('token', process.env.FORM_TOKEN);
 
     axios
-      .post(`/`, formData, {
+      .post(`/`, formData, encode({'form-name': 'resume-form'}), {
         headers: {
           //Authorization: `Basic ${process.env.HEADER_TOKEN}`,
         },
