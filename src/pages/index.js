@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
       netlify-honeypot='bot-field' 
       data-netlify='true' 
       onSubmit={submit}>
-        <p class='hidden'>
+        <p style={{display: 'none'}}>
           <label>
             Don’t fill this out if you’re human: <input name='bot-field' />
           </label>
