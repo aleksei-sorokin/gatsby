@@ -33,6 +33,8 @@ const IndexPage = ({ data }) => {
   console.log('env qwe 2', process.env.GATSBY_QWE)
   console.log('env asd', process.env.ASD)
   console.log('env asd 2', process.env.GATSBY_ASD)
+  console.log('env node', process.env.NODE_ENV)
+  console.log('env staging', process.env.STAGING)
   return (
     <main style={pageStyles}>
       <Header />
