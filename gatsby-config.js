@@ -10,7 +10,6 @@ if (process.env.STAGING) {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
     title: "Gatsby Test",
   },
   plugins: [
