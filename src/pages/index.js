@@ -30,7 +30,9 @@ const articleStyles = {
 const IndexPage = ({ data }) => {
   const { nodes } = data.allMarkdownRemark;
   console.log('env qwe', process.env.QWE)
+  console.log('env qwe 2', process.env.QWE)
   console.log('env asd', process.env.ASD)
+  console.log('env asd 2', process.env.GATSBY_ASD)
   return (
     <main style={pageStyles}>
       <Header />

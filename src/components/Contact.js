@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-
 const ApplyFormFormik = ({ data }) => {
-  const [validationFlag, setValidationFlag] = useState(false);
   const [resumeName, setResumeName] = useState('');
 
   const formik = useFormik({
@@ -123,7 +116,7 @@ const ApplyFormFormik = ({ data }) => {
                 <input data-size='5000' accept='.png, .jpg, .jpeg, .pdf, .doc, .docx' className='jsFileInput' type='file' name='resumeField' id='resumeField' onChange={(e) => handleAddingFile(e)} />
               </div>
             </div>
-            <button disabled={formik.isSubmitting} type='submit' onClick={() => setValidationFlag(Object.values(formik.errors).find((key) => key === true))}>
+            <button disabled={formik.isSubmitting} type='submit'>
               Submit
             </button>
           </form>
