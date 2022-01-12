@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from 'gatsby';
+import { Helmet } from "react-helmet";
 
 const listStyles = {
   listStyle: 'none',
@@ -12,6 +13,7 @@ const listStyles = {
 
 const Header = () =>  (
   <header style={{width: '100%'}}>
+    <Helmet title={'helmet title'}/>
       <ul style={listStyles}>
         <li>
           <Link to='/'>Home</Link>
