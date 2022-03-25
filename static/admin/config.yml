@@ -6,16 +6,17 @@ backend:
 media_folder: static/assets/images/upload
 public_folder: static/assets/images
 
+show_preview_links: true
+
 collections:
   - name: vacancies
     label: Vacancies
     folder: "src/vacancies"
     create: true
     slug: "{{slug}}"
-    preview_path: /{{slug}}
-    preview_path_date_field: published_at
+    preview_path: "/{{slug}}"
     fields:
-      - { name: url, label: Url, default: "/{{slug}}" }
+      - { name: url, label: Url }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
