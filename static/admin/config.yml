@@ -11,15 +11,10 @@ collections:
     label: Vacancies
     folder: "src/vacancies"
     create: true
-    extension: md
     slug: "{{slug}}"
-    preview_path: "landings/{{permalink}}" 
+    preview_path: "{{slug}}" 
     fields:
       - { name: url, label: Url }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
-      - label: Permalink (e.g. "my-landing/" or "my-page/", don't forget the trailing slash!)
-        name: permalink
-        widget: string
-        default: "{{slug}}"
