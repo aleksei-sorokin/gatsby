@@ -6,7 +6,8 @@ backend:
 media_folder: static/assets/images/upload
 public_folder: static/assets/images
 
-show_preview_links: true
+editor:
+     preview: true
 
 collections:
   - name: vacancies
