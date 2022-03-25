@@ -22,4 +22,4 @@ collections:
       - label: Permalink (e.g. "my-landing/" or "my-page/", don't forget the trailing slash!)
         name: permalink
         widget: string
-        default: "my-page/"
+        default: "{{slug}}"
